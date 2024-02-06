@@ -2,21 +2,22 @@ package br.com.alura.comex;
 
 public class Teste {
     public static void main(String[] args) {
+        Produto produto1 = new Produto("TV");
+        produto1.setDescricao("TV 29 polegadas");
+        produto1.setPrecoUnitario(1000.00);
+        produto1.setQuantidade(2);
 
-        //Task2
-        Produto myProduct = new Produto();
-        myProduct.nome = "Ferrari F40";
-        myProduct.descricao = "Ferrari ano 1994 carro de consumo de muitos colecionadores de ferrari";
-        myProduct.precoUnitario = 50000;
-        myProduct.quantidade = 1;
+        Produto produto2 = new Produto("TV");
+        produto2.setNome("TV");
+        produto2.setDescricao("TV 29 polegadas");
+        produto2.setPrecoUnitario(1000.00);
+        produto2.setQuantidade(2);
 
-        Produto book = new Produto();
-        book.nome = "Pai Rico e Pai Pobre";
-        book.descricao = "Aprenda sobre ativo e passivo";
-        book.precoUnitario = 34.99;
-        book.quantidade = 50;
+        if(produto1 == produto2){
+            System.out.println("Os objetos são idênticos");
+        }else{
+            System.out.println("Os objetos não são idênticos, eles possuem referências diferentes");
+        }
 
-        //Task 3
-        System.out.println(myProduct == book);
     }
 }
